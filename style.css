@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(160deg, #fdf3e7, #eaf2fb);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #1b2a5c;
+}
+
+.card {
+  background: #fff;
+  width: 100%;
+  max-width: 440px;
+  padding: 32px 28px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(27, 42, 92, 0.12);
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: #5b6891;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 2px solid #d5dcee;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: #f97316;
+}
+
+input.invalid {
+  border-color: #dc2626;
+  background: #fff5f5;
+}
+
+.error {
+  display: block;
+  color: #dc2626;
+  font-size: 0.85rem;
+  min-height: 1.1em;
+  margin-top: 4px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.1s, opacity 0.2s;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: #f97316;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background: #e8edf8;
+  color: #1b2a5c;
+}
+
+.result {
+  margin-top: 26px;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  background: #f4f6fb;
+  border: 2px solid #d5dcee;
+}
+
+.hidden {
+  display: none;
+}
+
+.result-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #5b6891;
+}
+
+.bmi-value {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.category {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.message {
+  font-size: 0.95rem;
+  color: #3d4a75;
+}
+
+/* Result colours per category */
+.result.underweight { background: #eaf4ff; border-color: #3b82f6; }
+.result.underweight .category { color: #2563eb; }
+
+.result.normal { background: #ecfdf3; border-color: #16a34a; }
+.result.normal .category { color: #15803d; }
+
+.result.overweight { background: #fff7ed; border-color: #f97316; }
+.result.overweight .category { color: #c2410c; }
+
+.result.obese { background: #fef2f2; border-color: #dc2626; }
+.result.obese .category { color: #b91c1c; }
+
+.legend {
+  width: 100%;
+  margin-top: 24px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.legend caption {
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.legend td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e3e8f4;
+}
+
+.legend td:last-child {
+  text-align: right;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 24px 18px;
+  }
+  .bmi-value {
+    font-size: 2.5rem;
+  }
+}
